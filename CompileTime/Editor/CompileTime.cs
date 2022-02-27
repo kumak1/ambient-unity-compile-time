@@ -37,7 +37,6 @@ namespace Recollect.Core.Utility
                 _isTrackingTime = false;
                 var compileTime = finishTime - _startTime;
                 PlayerPrefs.DeleteKey("CompileStartTime");
-                Debug.Log("Script compilation time: \n" + compileTime.ToString("0.000") + "s");
 
                 var ambientEnable = PlayerPrefs.GetInt(CompileTimePreference.AmbientEnable);
                 var channelId = PlayerPrefs.GetString(CompileTimePreference.AmbientChannelId);
@@ -47,7 +46,14 @@ namespace Recollect.Core.Utility
                 if (ambientEnable > 0 && !string.IsNullOrEmpty(channelId) && !string.IsNullOrEmpty(writeKey))
                 {
                     var ambientClient = new Ambient(channelId, readKey, writeKey);
-                    ambientClient.Send(new AmbientSendParameter { D1 = compileTime.ToString("0.000") });
+                    var response = ambientClient.Send(new AmbientSendParameter { D1 = compileTime.ToString("0.000") });
+                    var validResponse = string.IsNullOrEmpty(response) ? "true" : "false";
+                    
+                    Debug.Log($"Script compilation time: \n{compileTime.ToString("0.000")}s\nAmbient Send: {validResponse}");
+                }
+                else
+                {
+                    Debug.Log($"Script compilation time: \n{compileTime.ToString("0.000")}s");
                 }
             }
         }
