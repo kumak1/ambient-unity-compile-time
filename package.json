@@ -7,6 +7,6 @@
   "keywords": [""],
   "category": "Test",
   "dependencies": {
-    "git@github.com:kumak1/ambient-unity-lib.git": "^0.1"
+    "com.kumak1.ambient-unity-lib": "https://github.com/kumak1/ambient-unity-lib.git"
   }
 }
