@@ -3,7 +3,7 @@
 
 using UnityEngine;
 using UnityEditor;
-using AmbientClient;
+using AmbientUnityLib;
 
 namespace Recollect.Core.Utility
 {
