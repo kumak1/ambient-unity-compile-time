@@ -3,15 +3,28 @@
 ambient-unity-compile-time は Unity Editor のコンパイル時間を計測するツールです。
 `Preference` ウィンドウで設定追記すると [Ambient](https://ambidata.io/) へ自動的に送信・データ集積することもできます。
 
-## Installing
+## Install
 
-### プロジェクトへパッケージの追加
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "npm",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "com.kumak1"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.kumak1.ambient-unity-compile-time": "0.1.2",
 
-Unity の `Package Manager` から追加します。
 
-1. `+` アイコンをクリック
-2. `Add package from git URL...` をクリック
-3. `git@github.com:kumak1/ambient-unity-compile-time.git` を入力
+    // 中略
+
+  }
+}
+```
 
 ## Usage
 
