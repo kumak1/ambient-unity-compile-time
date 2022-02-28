@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 using AmbientUnityLib;
 
-namespace Recollect.Core.Utility
+namespace AmbientUnityCompileTime
 {
     [InitializeOnLoad]
     internal class CompileTime : EditorWindow

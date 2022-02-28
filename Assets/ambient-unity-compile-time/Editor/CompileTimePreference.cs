@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Recollect.Core.Utility
+namespace AmbientUnityCompileTime
 {
     internal static class CompileTimePreference
     {
