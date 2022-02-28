@@ -1,0 +1,19 @@
+{
+  "name": "com.kumak1.ambient-unity-compile-time",
+  "displayName": "Ambient Unity Compile Time",
+  "description": "This package is\nfor testing package manager.",
+  "author": {
+    "name": "kumak1",
+    "url": "https://github.com/kumak1"
+  },
+  "version": "0.1.2",
+  "unity": "2022.2",
+  "license": "MIT License",
+  "keywords": [
+    "unity",
+    "ambient"
+  ],
+  "dependencies": {
+    "com.kumak1.ambient-unity-lib": "0.1.1"
+  }
+}
